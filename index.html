@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -62,7 +65,7 @@
                         <div class="profile" v-for="(item,index) in contacts">
                             <!-- profile icon -->
                             <div class="card_pf margin_1 inline">
-                                <img class="profile" :src="contacts[index].avatar" alt="">
+                                <img class="profile" :src="'./assets/img/avatar' + item.avatar + '.jpg'" alt="">
                             </div>
     
                             <!-- name user -->
@@ -74,8 +77,9 @@
                 </div>
             </div>
 
-            <!-- Riht Section -->
+            <!-- Right Section -->
             <div class="aside_right flex_col">
+                <!-- user chat attivo -->
                 <div class="top_aside flex_box">
 
                     <!-- Img profile-->
@@ -97,8 +101,11 @@
                     
                 </div>
 
+                <!-- sezione messaggi -->
                 <div class="main_right">
-
+                    <div class="container">
+                        
+                    </div>
                 </div>
 
                 <!-- Foot Main Section -->
@@ -107,7 +114,7 @@
                         <i class="fa-solid fa-face-smile mid"></i>
                     </div>
 
-                    <input type="text" class="input_t">
+                    <input type="text" class="input_t" placeholder=" Scrivi un messaggio">
 
                     <div class="relative">
                         <i class="fa-solid fa-microphone mid"></i>
