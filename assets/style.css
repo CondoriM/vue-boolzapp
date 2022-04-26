@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --backgrond-firs: grey;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+/*********
+CONTAINERS
+**********/
+
+.container_main{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    background-color: green;
+}
+
+.aside_right{
+    width: 70%;
+}
+
+.aside_left{
+    width: 30%;
+}
+
+/**********
+BODY REGION
+***********/
+
