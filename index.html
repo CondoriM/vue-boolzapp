@@ -62,10 +62,10 @@
                     <!-- section contacts -->
                     <div>
 
-                        <div class="profile" v-for="(item,index) in contacts">
+                        <div class="profile" v-for="(item,index) in contacts" @click="activeChat(index)">
                             <!-- profile icon -->
                             <div class="card_pf margin_1 inline">
-                                <img class="profile" :src="'./assets/img/avatar' + item.avatar + '.jpg'" alt="">
+                                <img class="profile" :src="'./assets/img/avatar' + item.avatar + '.jpg'">
                             </div>
     
                             <!-- name user -->
@@ -104,7 +104,9 @@
                 <!-- sezione messaggi -->
                 <div class="main_right">
                     <div class="container">
-                        
+                        <div v-for="(mes,index) in chats">
+                            <span>{{mes[0].message}}</span>
+                        </div>
                     </div>
                 </div>
 
