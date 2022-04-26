@@ -12,7 +12,9 @@
     
     <div id="app">
 
-        <div class="container_main">
+        <div class="container_main ">
+
+            <!-- Left Section -->
             <div class="aside_left">
                 <div class="top_aside flex_box">
 
@@ -27,7 +29,7 @@
                     </div>
                     
                     <!--icon section-->
-                    <div class="icons flex_box gap_1">
+                    <div class="icons flex_box gap_1 margin_r">
                         <i class="fa-solid fa-circle-notch"></i>
                         <i class="fa-solid fa-message"></i>
                         <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -57,14 +59,14 @@
                     <!-- section contacts -->
                     <div>
 
-                        <div class="profile">
+                        <div class="profile" v-for="(item,index) in contacts">
                             <!-- profile icon -->
                             <div class="card_pf margin_1 inline">
-                                <img class="profile" :src="contacts[0].avatar" alt="">
+                                <img class="profile" :src="contacts[index].avatar" alt="">
                             </div>
     
                             <!-- name user -->
-                            <span class="mid_v">Sofia</span>
+                            <span class="mid_v">{{item.name}}</span>
                         </div>
 
                     </div>
@@ -72,8 +74,45 @@
                 </div>
             </div>
 
-            <div class="aside_right">
-            
+            <!-- Riht Section -->
+            <div class="aside_right flex_col">
+                <div class="top_aside flex_box">
+
+                    <!-- Img profile-->
+                    <div class="profile">
+                        <div class="card_pf margin_1 inline">
+                            <img class="profile" :src="contacts[0].avatar" alt="">
+                        </div>
+
+                        <!-- name user -->
+                        <span class="mid_v">Sofia</span>
+                    </div>
+                    
+                    <!--icon section-->
+                    <div class="icons flex_box gap_1 margin_r">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    
+                </div>
+
+                <div class="main_right">
+
+                </div>
+
+                <!-- Foot Main Section -->
+                <div class="foot_right card_pf margin_tb flex_box">
+                    <div class="relative">
+                        <i class="fa-solid fa-face-smile mid"></i>
+                    </div>
+
+                    <input type="text" class="input_t">
+
+                    <div class="relative">
+                        <i class="fa-solid fa-microphone mid"></i>
+                    </div>
+                </div>
             </div>
         </div>
 

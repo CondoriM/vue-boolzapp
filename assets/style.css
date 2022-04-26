@@ -32,6 +32,14 @@ UTILITY
     margin: 0.5rem;
 }
 
+.margin_r{
+    margin-right: 1rem;
+}
+
+.margin_tb{
+    margin: 0.5rem 0 0.5rem 0;
+}
+
 .profile{
     border-radius: 50%;   
     position: relative;
@@ -50,8 +58,17 @@ UTILITY
     display: flex;
 }
 
+.flex_col{
+    display: flex;
+    flex-direction: column;
+}
+
 .inline{
     display: inline-block;
+}
+
+.relative{
+    position: relative;
 }
 
 /*********
@@ -62,6 +79,7 @@ CONTAINERS
     width: 90%;
     margin: auto;
     background-color: green;
+    display: flex;
 }
 
 .aside_right{
@@ -80,6 +98,15 @@ CONTAINERS
     flex-direction: column;
 }
 
+.main_right{
+    height: 100%;
+    background-image: url(./img/mine.jpg);
+}
+
+.foot_right{
+    width: 100%;
+}
+
 /**********
 BODY REGION
 ***********/
@@ -89,6 +116,14 @@ TEXT STYLE
 *********/
 .input_t{
     width: 100%;
+}
+
+.foot_right .input_t{
+    width: 85%;
+}
+
+.foot_right div{
+    width: calc(15% / 2);
 }
 
 .mid{
