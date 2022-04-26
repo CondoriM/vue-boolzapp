@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
@@ -13,11 +14,66 @@
 
         <div class="container_main">
             <div class="aside_left">
+                <div class="top_aside flex_box">
 
+                    <!-- Img profile-->
+                    <div class="profile">
+                        <div class="card_pf margin_1 inline">
+                            <img class="profile" :src="contacts[0].avatar" alt="">
+                        </div>
+
+                        <!-- name user -->
+                        <span class="mid_v">Sofia</span>
+                    </div>
+                    
+                    <!--icon section-->
+                    <div class="icons flex_box gap_1">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                    
+                </div>
+
+                <div class="main_left ">
+                    <!-- notification block -->
+                    <div class="profile">
+                        <div class="margin_1 inline">
+                            <div class="card_pf profile">
+                                <i class="fa-solid fa-bell-slash mid"></i>
+                            </div>
+                        </div>
+
+                        <!-- name user -->
+                        <div class="mid_v inline">
+                            <span>Ricevi notifiche di nuovi messaggi</span><br>
+                            <span>Attiva notifiche desktop</span>
+                        </div>
+                    </div>
+
+                    <!-- Nav bar -->
+                    <input class="input_t pad_1" type="text">
+
+                    <!-- section contacts -->
+                    <div>
+
+                        <div class="profile">
+                            <!-- profile icon -->
+                            <div class="card_pf margin_1 inline">
+                                <img class="profile" :src="contacts[0].avatar" alt="">
+                            </div>
+    
+                            <!-- name user -->
+                            <span class="mid_v">Sofia</span>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
 
             <div class="aside_right">
-                
+            
             </div>
         </div>
 

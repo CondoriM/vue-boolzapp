@@ -13,14 +13,54 @@ body{
     width: 100vw;
 }
 
+img{
+    width: 100%;
+}
+
+/******
+UTILITY
+******/
+.gap_1{
+    column-gap: 1rem;
+}
+
+.pad_1{
+    padding: 0.5rem;
+}
+
+.margin_1{
+    margin: 0.5rem;
+}
+
+.profile{
+    border-radius: 50%;   
+    position: relative;
+}
+
+.card_pf{
+    height: 3rem;
+    width: 3rem;
+}
+
+.icons{
+    align-items: center;
+}
+
+.flex_box{
+    display: flex;
+}
+
+.inline{
+    display: inline-block;
+}
+
 /*********
 CONTAINERS
 **********/
 
 .container_main{
-    width: 80%;
+    width: 90%;
     margin: auto;
-    display: flex;
     background-color: green;
 }
 
@@ -32,7 +72,35 @@ CONTAINERS
     width: 30%;
 }
 
+.top_aside{
+    justify-content: space-between;
+}
+
+.main_left{
+    flex-direction: column;
+}
+
 /**********
 BODY REGION
 ***********/
+
+/*********
+TEXT STYLE
+*********/
+.input_t{
+    width: 100%;
+}
+
+.mid{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.mid_v{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
 
