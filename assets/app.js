@@ -3,6 +3,7 @@ const app = new Vue({
 
     data:{
         activeUser: 0,
+        text:'',
 
         contacts: [
             {
@@ -173,6 +174,12 @@ const app = new Vue({
 
         activeChat(i){
             this.activeUser = i
+        },
+
+        sendMessage(){
+            ciao = this.text
+            this.contacts[this.activeUser].messages.push({date: '',message: ciao,status: 'sent'})
+            this.text = ''
         }
     }
 })
