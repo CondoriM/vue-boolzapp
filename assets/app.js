@@ -184,6 +184,10 @@ const app = new Vue({
             this.chatActive[this.activeUser].messages.push({date: '',message: ciao,status: 'sent'})
             setTimeout(() => this.chatActive[this.activeUser].messages.push({date: '',message: 'ok',status: 'received'}), 1000);
             this.text = ''
+        },
+
+        deleteMess(i){
+            
         }
     },
 
@@ -196,13 +200,3 @@ const app = new Vue({
         }
     }
 })
-
-/*
-filteredCont() {
-    return this.contacts.filter(contact => {
-        result = contact.name.toLowerCase().includes(this.search.toLowerCase())
-        this.chatActive.
-        this.chatActive.push(result)
-        return result;
-    })
-  }*/

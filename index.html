@@ -69,7 +69,7 @@
                     <!-- section contacts -->
                     <div class="contact_box">
 
-                        <div class="relative bg_first" v-for="(item,index) in filteredCont" :class="index === activeUser ? 'active' : ''" @click="activeChat(index)">
+                        <div class="relative bg_first" v-for="(item,index) in chatActive" :class="index === activeUser ? 'active' : ''" @click="activeChat(index)">
                             <!-- profile icon -->
                             <div class="card_pf margin_1 inline">
                                 <img class="profile" :src="'./assets/img/avatar' + item.avatar + '.jpg'">
@@ -111,8 +111,16 @@
                 <!-- sezione messaggi -->
                 <div class="main_right">
                     <div class="container">
+
+                        <!-- Conversazione utente attivo -->
                         <div v-for="(mes,index) in chatActive[activeUser].messages" class="flex_col ">
-                            <span class="pad_1 margin_1 br_1" :class="mes.status === 'received' ? 'receive' : 'sent' ">{{mes.message}}</span>
+                            <span class="pad_1 margin_1 br_1" :class="mes.status === 'received' ? 'receive' : 'sent' ">{{mes.message}}
+
+                                <!-- icon option chat -->
+                                <span>
+                                    <i class="fa-solid fa-angle-down margin_l" @click=""></i>
+                                </span>
+                            </span>
                         </div>
                     </div>
                 </div>
