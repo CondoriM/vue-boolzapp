@@ -19,7 +19,7 @@
 
             <!-- Left Section -->
             <div class="aside_left">
-                <div class="top_aside flex_box">
+                <div class="top_aside flex_box bg_second">
 
                     <!-- Img profile-->
                     <div class="profile">
@@ -42,9 +42,9 @@
 
                 <div class="main_left ">
                     <!-- notification block -->
-                    <div class="profile">
+                    <div class="relative bg_not">
                         <div class="margin_1 inline">
-                            <div class="card_pf profile">
+                            <div class="card_pf profile bg_first">
                                 <i class="fa-solid fa-bell-slash mid"></i>
                             </div>
                         </div>
@@ -57,12 +57,19 @@
                     </div>
 
                     <!-- Nav bar -->
-                    <input class="input_t pad_1" type="text">
+                    <div class="flex_box input_t bg_first pad_1">
+                        <div class="relative search">
+                            <i class="fa-solid fa-magnifying-glass mid"></i>
+                        </div>
+                        
+                        <input class="input_t pad_1" type="text" placeholder="Cerca o inizia una nuova chat">  
+                        
+                    </div>
 
                     <!-- section contacts -->
                     <div>
 
-                        <div class="profile" v-for="(item,index) in contacts" @click="activeChat(index)">
+                        <div class="relative bg_first" v-for="(item,index) in contacts" :class="index === activeUser ? 'active' : ''" @click="activeChat(index)">
                             <!-- profile icon -->
                             <div class="card_pf margin_1 inline">
                                 <img class="profile" :src="'./assets/img/avatar' + item.avatar + '.jpg'">
@@ -78,18 +85,18 @@
             </div>
 
             <!-- Right Section -->
-            <div class="aside_right flex_col">
+            <div class="aside_right flex_col bg_second">
                 <!-- user chat attivo -->
                 <div class="top_aside flex_box">
 
                     <!-- Img profile-->
-                    <div class="profile">
+                    <div class="relative">
                         <div class="card_pf margin_1 inline">
-                            <img class="profile" :src="contacts[0].avatar" alt="">
+                            <img class="profile" :src="'./assets/img/avatar' + contacts[activeUser].avatar + '.jpg'" alt="">
                         </div>
 
                         <!-- name user -->
-                        <span class="mid_v">Sofia</span>
+                        <span class="mid_v">{{contacts[activeUser].name}}</span>
                     </div>
                     
                     <!--icon section-->
@@ -104,8 +111,8 @@
                 <!-- sezione messaggi -->
                 <div class="main_right">
                     <div class="container">
-                        <div v-for="(mes,index) in chats">
-                            <span>{{mes[0].message}}</span>
+                        <div v-for="(mes,index) in contacts[activeUser].messages" class="flex_col ">
+                            <span class="pad_1 margin_1 br_1" :class="mes.status === 'received' ? 'receive' : 'sent' ">{{mes.message}}</span>
                         </div>
                     </div>
                 </div>
@@ -116,7 +123,7 @@
                         <i class="fa-solid fa-face-smile mid"></i>
                     </div>
 
-                    <input type="text" class="input_t" placeholder=" Scrivi un messaggio">
+                    <input type="text" class="input_t br_1" placeholder=" Scrivi un messaggio">
 
                     <div class="relative">
                         <i class="fa-solid fa-microphone mid"></i>

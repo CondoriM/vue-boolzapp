@@ -5,17 +5,27 @@
 }
 
 :root{
-    --backgrond-firs: grey;
+    --bg-primary: #ffffff;
+    --bg-secondary: #ebebeb;
+
+    --bg-notification: #8ddbfd;
+    --bg-selec-user: #e9eceb;
+    --bg-mess-what: #d5faba;
 }
 
 body{
     height: 100vh;
     width: 100vw;
     font-family: 'Roboto', sans-serif;
+    background-color: #d5faba;
 }
 
 img{
     width: 100%;
+}
+
+input{
+    border: none;
 }
 
 /******
@@ -72,14 +82,20 @@ UTILITY
     position: relative;
 }
 
+.br_1{
+    border-radius: 10px;
+}
+
 /*********
 CONTAINERS
 **********/
+.container{
+    padding: 1rem;
+}
 
 .container_main{
     width: 90%;
     margin: auto;
-    background-color: green;
     display: flex;
 }
 
@@ -108,15 +124,35 @@ CONTAINERS
     width: 100%;
 }
 
-/**********
-BODY REGION
-***********/
+/*********
+BODY STYLE
+**********/
+
+.bg_first{
+    background-color: var(--bg-primary);
+}
+
+.bg_second{
+    background-color: var(--bg-secondary);
+}
+
+.bg_not{
+    background-color: var(--bg-notification);
+}
+
+.bg_user{
+    background-color: var(--bg-selec-user);
+}
 
 /*********
 TEXT STYLE
 *********/
 .input_t{
     width: 100%;
+}
+
+.main_left .search{
+    width: 10%;
 }
 
 .foot_right .input_t{
@@ -140,3 +176,20 @@ TEXT STYLE
     transform: translate(0,-50%);
 }
 
+/********
+FUNCTIONS
+********/
+
+.active{
+    background-color: var(--bg-selec-user);
+}
+
+.sent{
+    align-self: flex-end;
+    background-color: var(--bg-mess-what);
+}
+
+.receive{
+    background-color: var(--bg-primary);
+    align-self: flex-start;
+}
