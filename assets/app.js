@@ -6,6 +6,8 @@ const app = new Vue({
         text:'',
         search:'',
 
+        chatActive:[],
+
         contacts: [
             {
                 name: 'Michele',
@@ -187,9 +189,20 @@ const app = new Vue({
 
     computed: {
         filteredCont() {
-          return this.contacts.filter(contact => {
-              return contact.name.toLowerCase().includes(this.search.toLowerCase())
+          return this.chatActive = this.contacts.filter(contact => {
+              result = contact.name.toLowerCase().includes(this.search.toLowerCase())
+              return result;
           })
         }
     }
 })
+
+/*
+filteredCont() {
+    return this.contacts.filter(contact => {
+        result = contact.name.toLowerCase().includes(this.search.toLowerCase())
+        this.chatActive.
+        this.chatActive.push(result)
+        return result;
+    })
+  }*/

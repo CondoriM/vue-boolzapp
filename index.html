@@ -92,11 +92,11 @@
                     <!-- Img profile-->
                     <div class="relative">
                         <div class="card_pf margin_1 inline">
-                            <img class="profile" :src="'./assets/img/avatar' + contacts[activeUser].avatar + '.jpg'" alt="">
+                            <img class="profile" :src="'./assets/img/avatar' + chatActive[activeUser].avatar + '.jpg'" alt="">
                         </div>
 
                         <!-- name user -->
-                        <span class="mid_v">{{contacts[activeUser].name}}</span>
+                        <span class="mid_v">{{chatActive[activeUser].name}}</span>
                     </div>
                     
                     <!--icon section-->
@@ -111,7 +111,7 @@
                 <!-- sezione messaggi -->
                 <div class="main_right">
                     <div class="container">
-                        <div v-for="(mes,index) in contacts[activeUser].messages" class="flex_col ">
+                        <div v-for="(mes,index) in chatActive[activeUser].messages" class="flex_col ">
                             <span class="pad_1 margin_1 br_1" :class="mes.status === 'received' ? 'receive' : 'sent' ">{{mes.message}}</span>
                         </div>
                     </div>
