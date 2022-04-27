@@ -179,6 +179,7 @@ const app = new Vue({
         sendMessage(){
             ciao = this.text
             this.contacts[this.activeUser].messages.push({date: '',message: ciao,status: 'sent'})
+            setTimeout(() => this.contacts[this.activeUser].messages.push({date: '',message: 'ok',status: 'received'}), 1000);
             this.text = ''
         }
     }
