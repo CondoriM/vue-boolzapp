@@ -15,7 +15,7 @@
     
     <div id="app">
 
-        <div class="container_main ">
+        <div class="container_main bg_first">
 
             <!-- Left Section -->
             <div class="aside_left">
@@ -40,7 +40,7 @@
                     
                 </div>
 
-                <div class="main_left ">
+                <div class="main_left">
                     <!-- notification block -->
                     <div class="relative bg_not">
                         <div class="margin_1 inline">
@@ -62,14 +62,14 @@
                             <i class="fa-solid fa-magnifying-glass mid"></i>
                         </div>
                         
-                        <input class="input_t pad_1" type="text" placeholder="Cerca o inizia una nuova chat">  
+                        <input class="input_t pad_1" type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">  
                         
                     </div>
 
                     <!-- section contacts -->
-                    <div>
+                    <div class="contact_box">
 
-                        <div class="relative bg_first" v-for="(item,index) in contacts" :class="index === activeUser ? 'active' : ''" @click="activeChat(index)">
+                        <div class="relative bg_first" v-for="(item,index) in filteredCont" :class="index === activeUser ? 'active' : ''" @click="activeChat(index)">
                             <!-- profile icon -->
                             <div class="card_pf margin_1 inline">
                                 <img class="profile" :src="'./assets/img/avatar' + item.avatar + '.jpg'">

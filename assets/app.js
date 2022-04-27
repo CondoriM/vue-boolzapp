@@ -4,6 +4,7 @@ const app = new Vue({
     data:{
         activeUser: 0,
         text:'',
+        search:'',
 
         contacts: [
             {
@@ -181,6 +182,14 @@ const app = new Vue({
             this.contacts[this.activeUser].messages.push({date: '',message: ciao,status: 'sent'})
             setTimeout(() => this.contacts[this.activeUser].messages.push({date: '',message: 'ok',status: 'received'}), 1000);
             this.text = ''
+        }
+    },
+
+    computed: {
+        filteredCont() {
+          return this.contacts.filter(contact => {
+              return contact.name.toLowerCase().includes(this.search.toLowerCase())
+          })
         }
     }
 })

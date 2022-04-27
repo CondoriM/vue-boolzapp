@@ -112,6 +112,7 @@ CONTAINERS
 }
 
 .main_left{
+    display: flex;
     flex-direction: column;
 }
 
@@ -122,6 +123,11 @@ CONTAINERS
 
 .foot_right{
     width: 100%;
+}
+
+.contact_box{
+    height: 400px;
+    overflow-y: scroll;
 }
 
 /*********
