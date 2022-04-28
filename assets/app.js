@@ -181,22 +181,32 @@ const app = new Vue({
 
         sendMessage(){
             ciao = this.text
-            this.chatActive[this.activeUser].messages.push({date: '',message: ciao,status: 'sent'})
-            setTimeout(() => this.chatActive[this.activeUser].messages.push({date: '',message: 'ok',status: 'received'}), 1000);
+            this.contacts[this.activeUser].messages.push({date: '',message: ciao,status: 'sent'})
+            setTimeout(() => this.contacts[this.activeUser].messages.push({date: '',message: 'ok',status: 'received'}), 1000);
             this.text = ''
         },
 
         deleteMess(i){
             
-        }
+        },
+
+        // filteredCont(){
+        //     this.contacts.forEach(contact => {
+        //         if(contact.name.toLowerCase().includes(this.search.toLowerCase())){
+        //             return contact.visible = true
+        //         }else{
+        //             return contact.visible = false
+        //         }
+        //     })
+        // }
     },
 
-    computed: {
-        filteredCont() {
-          return this.chatActive = this.contacts.filter(contact => {
-              result = contact.name.toLowerCase().includes(this.search.toLowerCase())
-              return result;
-          })
-        }
-    }
+    // computed: {
+    //     filteredCont() {
+    //       return this.chatActive = this.contacts.filter(contact => {
+    //           result = contact.name.toLowerCase().includes(this.search.toLowerCase())
+    //           return result;
+    //       })
+    //     }
+    // }
 })
